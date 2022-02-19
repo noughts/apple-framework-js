@@ -15,7 +15,8 @@
     "jsx": "preserve",
     "incremental": true,
     "outDir": "dist",
-    "sourceMap": true
+    "sourceMap": true,
+    "declaration": true,
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules", "node_modules.nosync"]
