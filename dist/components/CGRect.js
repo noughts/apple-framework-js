@@ -1,4 +1,9 @@
-import CGPoint from "./CGPoint";
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var CGPoint_1 = __importDefault(require("./CGPoint"));
 var CGRect = /** @class */ (function () {
     function CGRect(x, y, width, height) {
         this.x = x;
@@ -9,7 +14,7 @@ var CGRect = /** @class */ (function () {
     Object.defineProperty(CGRect.prototype, "origin", {
         // Basic Geometric Properties
         get: function () {
-            return new CGPoint(this.x, this.y);
+            return new CGPoint_1.default(this.x, this.y);
         },
         enumerable: false,
         configurable: true
@@ -23,21 +28,21 @@ var CGRect = /** @class */ (function () {
     });
     Object.defineProperty(CGRect.prototype, "topRight", {
         get: function () {
-            return new CGPoint(this.maxX, this.y);
+            return new CGPoint_1.default(this.maxX, this.y);
         },
         enumerable: false,
         configurable: true
     });
     Object.defineProperty(CGRect.prototype, "bottomRight", {
         get: function () {
-            return new CGPoint(this.maxX, this.maxY);
+            return new CGPoint_1.default(this.maxX, this.maxY);
         },
         enumerable: false,
         configurable: true
     });
     Object.defineProperty(CGRect.prototype, "bottomLeft", {
         get: function () {
-            return new CGPoint(this.x, this.maxY);
+            return new CGPoint_1.default(this.x, this.maxY);
         },
         enumerable: false,
         configurable: true
@@ -83,5 +88,5 @@ var CGRect = /** @class */ (function () {
     };
     return CGRect;
 }());
-export default CGRect;
+exports.default = CGRect;
 //# sourceMappingURL=CGRect.js.map

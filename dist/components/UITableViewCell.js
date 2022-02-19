@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,13 +14,17 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-import React from "react";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var react_1 = __importDefault(require("react"));
 var UITableViewCell = /** @class */ (function (_super) {
     __extends(UITableViewCell, _super);
     function UITableViewCell() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     return UITableViewCell;
-}(React.Component));
-export default UITableViewCell;
+}(react_1.default.Component));
+exports.default = UITableViewCell;
 //# sourceMappingURL=UITableViewCell.js.map

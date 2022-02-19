@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,13 +14,17 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-import React from "react";
-import CGRect from "./CGRect";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var react_1 = __importDefault(require("react"));
+var CGRect_1 = __importDefault(require("./CGRect"));
 var UITableView = /** @class */ (function (_super) {
     __extends(UITableView, _super);
     function UITableView(a) {
         var _this = _super.call(this, a) || this;
-        _this.root_ref = React.createRef();
+        _this.root_ref = react_1.default.createRef();
         _this.onScroll = _this.onScroll.bind(_this);
         return _this;
     }
@@ -43,7 +48,7 @@ var UITableView = /** @class */ (function (_super) {
         if (this.root_ref.current) {
             width = this.root_ref.current.clientWidth;
         }
-        return new CGRect(0, y, width, this.props.rowHeight);
+        return new CGRect_1.default(0, y, width, this.props.rowHeight);
     };
     // Other
     // dequeueReusableCell(withIdentifier: string, indexPath: NSIndexPath): UITableViewCell {
@@ -79,6 +84,6 @@ var UITableView = /** @class */ (function (_super) {
 		</>;
     };
     return UITableView;
-}(React.Component));
-export default UITableView;
+}(react_1.default.Component));
+exports.default = UITableView;
 //# sourceMappingURL=UITableView.jsx.map
